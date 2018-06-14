@@ -1,0 +1,14 @@
+  <div class="mx-2  my-2">
+      <h1 class="head-title">Gallery Images</h1>
+  <div class="row">    
+      <div class="col-md-3 custom-padding"  *ngFor="let image of this._imageService.images">
+        <div class="image-wrapper">        
+                <a [routerLink]="['/comment',image.ID]">                 
+                  <img class=" img-fluid custom-image" src={{image.url}}>
+                </a>  
+            <button class="btn btn-danger btn-sm del-btn" type="submit" title="Delete" (click)="deletePic(image.ID)" *ngIf="authservice.isAdmin()" >
+              <i class="fas fa-times"></i></button>
+         </div>
+  </div>
+  </div>
+</div>

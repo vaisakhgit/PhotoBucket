@@ -1,0 +1,17 @@
+.image-wrapper{
+    width: 100%;
+    
+}
+.custom-image{
+    width: 100%;
+    height: 600px;
+    object-fit:cover;
+}
+.img-avatar{
+    height: 65px;
+    width: 65px;
+}
+.btn-del{
+    float:right;
+}
+

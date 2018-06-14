@@ -1,0 +1,20 @@
+
+<nav class="navbar navbar-light nav-color">
+  <a routerLink="/gal" class="navbar-brand justify-content-lg-start"> <img class="imgclass"src="./assets/images/logo.png" ></a>
+  
+  <form class="form-inline justify-content-lg-end">             
+                    <input class="form-control  search-area my-2 my-sm-0" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-search my-2 my-sm-0" type="submit"> <i class="fas fa-search" title="Search"></i></button>
+    <ul class="navbar-nav flex-row ml-md-auto d-md-flex">      
+        <li class="nav-item" *ngIf="!authService.isAuthenticated()">
+          <a data-toggle="tooltip" title="Login" routerLink="/signin" class="nav-link p-2">LogIn</a>          
+        </li> 
+        <li class="nav-item" *ngIf="authService.isAuthenticated()">
+          <a data-toggle="tooltip" title="LogOut"routerLink="/signin"  (click)="onLogout()" class="nav-link p-2">LogOut</a>
+        </li>       
+      <li class="nav-item" *ngIf="!authService.isAuthenticated()">
+        <a href routerLink="/signup" class="nav-link p-2">SignUp</a>
+      </li>
+    </ul>
+  </form>
+</nav>
